@@ -1,0 +1,78 @@
+
+  Stage.manual() {
+    // temp variables for init of Stage
+	  if (_manualCanvas != null && _manualHeight == null && _manualWidth == null && _manualOptions == null) {
+		  loadStage(_manualCanvas);
+		  } else {
+		  print("Must provide canvas");
+		  return;
+		  }
+
+    if (_manualOptions != null) {
+      loadStage(
+        _manualCanvas,
+        width: null,
+        height: null,
+        options: _manualOptions,
+      );
+    } else if (_manualHeight != null && _manualWidth != null) {
+      loadStage(
+        _manualCanvas,
+        width: _manualWidth,
+        height: _manualHeight,
+        options: _manualOptions,
+      );
+    }
+
+    if (_manualHeight != null && _manualWidth != null) {
+      loadStage(
+        _manualCanvas,
+        width: _manualWidth,
+        height: _manualHeight,
+        options: _manualOptions,
+      );
+    }
+  }
+
+    CanvasElement _manualCanvas;
+    int _manualWidth, _manualHeight;
+    StageOptions _manualOptions;
+
+    //manualCanvas
+    CanvasElement get manualCanvas => this._manualCanvas;
+    set manualCanvas(CanvasElement manualCanvas) {
+      this._manualCanvas = manualCanvas;
+    }
+
+    //manualWidth
+    int get manualWidth => this._manualWidth;
+    set manualWidth(int manualWidth) {
+      this._manualWidth = manualWidth;
+    }
+
+    //manualHeight
+    int get manualHeight => this._manualHeight;
+    set manualHeight(int manualHeight) {
+      this._manualHeight = manualHeight;
+    }
+    CanvasElement _Canvas;
+    int _Width, _Height;
+    StageOptions _Options;
+
+    //Canvas
+    CanvasElement get Canvas => this._Canvas;
+    set Canvas(CanvasElement Canvas) {
+      this._Canvas = Canvas;
+    }
+
+    //Width
+    int get Width => this._Width;
+    set Width(int Width) {
+      this._Width = Width;
+    }
+
+    //Height
+    int get Height => this._Height;
+    set Height(int Height) {
+      this._Height = Height;
+    }

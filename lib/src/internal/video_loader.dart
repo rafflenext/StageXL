@@ -9,8 +9,7 @@ class VideoLoader {
   static final List<String> supportedTypes = _getSupportedTypes();
 
   final VideoElement video = new VideoElement();
-  final AggregateError aggregateError =
-      new AggregateError("Error loading video.");
+  final AggregateError aggregateError = new AggregateError("Error loading video.");
   final Completer<VideoElement> _completer = new Completer<VideoElement>();
 
   StreamSubscription _onCanPlaySubscription;
@@ -91,13 +90,15 @@ class VideoLoader {
     var video = new VideoElement();
     var valid = ["maybe", "probably"];
 
-    if (valid.contains(video.canPlayType("video/webm")))
+    if (valid.contains(video.canPlayType("video/webm"))) {
       supportedTypes.add("webm");
-    if (valid.contains(video.canPlayType("video/mp4")))
+    }
+    if (valid.contains(video.canPlayType("video/mp4"))) {
       supportedTypes.add("mp4");
-    if (valid.contains(video.canPlayType("video/ogg")))
+    }
+    if (valid.contains(video.canPlayType("video/ogg"))) {
       supportedTypes.add("ogg");
-
+    }
     print("StageXL video types   : $supportedTypes");
 
     return supportedTypes.toList(growable: false);

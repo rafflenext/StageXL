@@ -17,8 +17,8 @@ linter:
     #- constant_identifier_names
     - control_flow_in_finally
     - empty_catches
-    - empty_constructor_bodies
-    - empty_statements
+#    - empty_constructor_bodies
+#    - empty_statements
     - hash_and_equals
     - implementation_imports
     - invariant_booleans
@@ -42,7 +42,7 @@ linter:
     - slash_for_doc_comments
     #- sort_constructors_first
     #- sort_unnamed_constructors_first
-    - super_goes_last
+#    - super_goes_last
     - test_types_in_equals
     - throw_in_finally
     - type_annotate_public_apis
