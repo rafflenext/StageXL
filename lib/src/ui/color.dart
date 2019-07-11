@@ -146,5 +146,7 @@ class Color {
   static const int Yellow = 0xFFFFFF00;
   static const int YellowGreen = 0xFF9ACD32;
   static const int SuperBurg = 0xFF480607;
-  static const int Golden = 0xFFC9933;
+  static const int SuperBurg80 = 0x50480607;
+  static const int Golden = 0xFFCC9933;
+  static const int GoldenSee = 0x50CC9933;
   }
